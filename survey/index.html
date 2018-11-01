@@ -1,56 +1,82 @@
 <html>
-    <head>
+    <head class="text-center">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+        <link rel="stylesheet" href="./style.css">
         <title>Survey Form</title>
     </head>
-    <body>
-        <h1 id="title"> Survey Form </h1>
-        <p id="description">A short survey form about what you need from life</p>
+    <body class="text-center2">
+        <div class="text-center">
+
+            <h1 id="title"> Survey Form </h1>
+            <p id="description">A short survey form about you</p>
+        </div>
         <form id="survey-form">
-            <div class="row">
-                <label id="name-label" for="name" class="left">Name</label>
-                <input class="right" type="text" placeholder="name" id="name" required>
+            <div class="row form-element">
+                <label id="name-label" for="name" class="col-md-6 left">Name</label>
+                <input class="col-md-6-right" type="text" placeholder="name" id="name" required>
             </div>
             
-            <div class="row">
-                <label id="email-label" for="email" class="left">email</label>
-                <input class="right" type="email" placeholder="email" id="email" required>
+            <div class="row form-element">
+                <label id="email-label" for="email" class="col-md-6 left">email</label>
+                <input class="col-md-6-right" type="email" placeholder="email" id="email" required>
             </div>
             
-            <div class="row">
-                <label id="number-label" for="number" class="left">age</label>
-                <input class="right" type="number" placeholder="age" id="number" min="1" max="5" required>
+            <div class="row form-element">
+                <label id="number-label" for="number" class="col-md-6 left">age</label>
+                <input class="col-md-6-right" type="number" placeholder="age" id="number" min="1" max="5" required>
             </div>
             
-            <div class="row">
-                <label id="location-label" for="location" class="left">location</label>
-                <select id="dropdown" class="right">
+            <div class="row form-element">
+                <label id="location-label" for="location" class="col-md-6 left">location</label>
+                <select id="dropdown" class="col-md-6-right">
                     <option value="us">US</option>
                     <option value="outside">Outside us</option>
                 </select>
             </div>
             
             
-            <div class="row">
-                <label id="sex-label" for="sex" class="left">sex</label>
-                <input type="radio" name="sex" value="male">
-                <input type="radio" name="sex" value="female">
+            <div class="row form-element">
+                <label id="sex-label" for="sex" class="col-md-6 left">sex</label>
+                <div class="col-md-6 right">
+                    <div class="row">
+                        <input id="male" type="radio" name="sex" value="male">
+                        <label for="male" class="pl-2">Male</label>
+                    </div>
+                    <div class="row">
+                        <input id="female" type="radio" name="sex" value="female">
+                        <label for="female" class="pl-2">Female</label>
+                    </div>
+                </div>
             </div>
             
             
-            <div class="row">
-                <label id="coffee-liking-label" for="coffee-liking" class="left">coffee liking</label>
-                <input class="right"  type="checkbox" value="sugar" id="coffee-liking" required>
-                <input class="right"  type="checkbox" value="milk" id="coffee-liking" required>
-                <input class="right"  type="checkbox" value="cream" id="coffee-liking" required>
+            <div class="row form-element">
+                <label id="coffee-liking-label" class="col-md-6 left">What do you like in your coffee</label>
+                <div class="col-md-6-right">
+                        
+                        <label for="coffee-liking-sugar" class="row">
+                            <input type="checkbox" value="sugar" id="coffee-liking-sugar" required>
+                            <span class="pl-2">Sugar</span>
+                        </label>
+                        
+                        <label for="coffee-liking-milk" class="row">
+                            <input type="checkbox" value="milk" id="coffee-liking-milk" required>
+                           <span class="pl-2">Milk</span> 
+                        </label>
+                        
+                        <label for="coffee-liking-cream" class="row">
+                            <input type="checkbox" value="cream" id="coffee-liking-cream" required>
+                            <span class="pl-2">Cream</span>
+                        </label>
+                </div>
             </div>            
 
-            <div class="row">
-                <label id="comments-label" for="comments" class="left">comments</label>
-                <textarea class="right"  id="comments" required></textarea>
+            <div class="row form-element">
+                <label id="comments-label" for="comments" class="col-md-6 left">comments</label>
+                <textarea class="col-md-6-right"  id="comments" required></textarea>
             </div>
             
-            <input type="submit" id="submit">
+            <input class="row form-element" type="submit" id="submit">
         </form>
     </body>
     </html>
